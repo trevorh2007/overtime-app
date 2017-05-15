@@ -1,5 +1,11 @@
 <%= form_for @post, class: "form-horizontal card" do |f| %>
 
+  <% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "Hold up!", sticky: false, image: :error) %>
+    <% end %>
+  <% end %>
+
   <div class="form-group">
     <%= f.label :date, class: "col-md-2 control-label" %> 
     <%= f.date_field :date, class: "form-control" %>  
