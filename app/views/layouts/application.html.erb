@@ -22,8 +22,7 @@
 		  </div>
 		</div>
 
-		<%= js add_gritter(flash[:notice], title: "Overtime App Notification", sticky: false, image: :success) %>
-		<%= js add_gritter(flash[:alert], title: "Overtime App Notification", sticky: false, image: :warning) %>
+		<%= render 'shared/alerts' %>
 		
   </body>
 </html>
