@@ -2,6 +2,10 @@
   <h2>
     Welcome <%= current_user.first_name %>
   </h2>
+  	Last login: <%= current_user.last_sign_in_at.strftime("%b %d, %Y") %> at <%= current_user.last_sign_in_at.strftime("%I:%M:%S %P") %>
+  	<br>
+  	About <%= time_ago_in_words(current_user.last_sign_in_at) %> ago
+  	<hr>
   <p>
     <a class="btn btn-primary btn-large" href="posts/new">Log Overtime</a>
   </p>
