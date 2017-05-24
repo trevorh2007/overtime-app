@@ -23,9 +23,11 @@
       </th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="posts">
     <%= render @posts %>
   </tbody>
 </table>
 
-<%= paginate @posts, window: 1 %>
+<div id="paginator">
+  <%= paginate @posts, window: 1, remote: true %>
+</div>
