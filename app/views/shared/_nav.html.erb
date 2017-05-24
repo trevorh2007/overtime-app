@@ -1,5 +1,5 @@
 <div class='logo'>
-  <h1>Time Tracker</h1>
+  <h1>Overtime Tracker</h1>
 </div>
 
 <% if current_user %>
@@ -10,6 +10,9 @@
     <li class="<%= active?(posts_path) %>">
       <%= link_to "Time Entries", posts_path %>
     </li>
+
+    <%= render 'shared/audit_log_tab' if policy(AuditLog).index? %>
+
     <li class="<%= active?(new_post_path) %>">
       <%= link_to "Add New Entry", new_post_path, id: 'new_post_from_nav' %>
     </li>
