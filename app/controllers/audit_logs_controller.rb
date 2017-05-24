@@ -5,8 +5,4 @@ class AuditLogsController < ApplicationController
 		authorize @audit_logs
 	end
 
-	def show
-
-	end
-
 end
