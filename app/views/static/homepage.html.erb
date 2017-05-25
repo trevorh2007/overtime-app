@@ -1,18 +1,16 @@
-<% if admin_types.include?(current_user.try(:type)) %>
-	<%= render 'admin' %>
-<% else %>
-	<%= render 'employee' %>
-<% end %>
-
-
-
-<div class="jumbotron">
+<div class="jumbotron text-white">
   <h2>
     Welcome <%= current_user.first_name %>
   </h2>
   <% Time.zone = "Mountain Time (US & Canada)" %>
   	Last login: <%= current_user.last_sign_in_at.strftime("%a %b %d, %Y") %> at <%= current_user.last_sign_in_at.strftime("%r") %>
   	<hr>
+
+  	<% if admin_types.include?(current_user.try(:type)) %>
+			<%= render 'admin' %>
+		<% else %>
+			<%= render 'employee' %>
+		<% end %>
   <p>
     <a class="btn btn-primary btn-large" href="posts/new">Log Overtime</a>
   </p>
