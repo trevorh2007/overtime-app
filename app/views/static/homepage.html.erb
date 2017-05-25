@@ -2,6 +2,7 @@
   <h2>
     Welcome <%= current_user.first_name %>
   </h2>
+  <% Time.zone = "Mountain Time (US & Canada)" %>
   	Last login: <%= current_user.last_sign_in_at.strftime("%a %b %d, %Y") %> at <%= current_user.last_sign_in_at.strftime("%r") %>
   	<hr>
   <p>
