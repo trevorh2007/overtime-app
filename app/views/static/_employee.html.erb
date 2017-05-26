@@ -8,12 +8,14 @@
 		</div>
 		<% else %>
 			<div class='homepage-block'>
-				<h3 id='pending-approval'>Hooray! No Pending Audit Logs</h3>
+				<h3 id='pending-approval'>Hooray! You have already confirmed your overtime!</h3>
 			</div>
 		<% end %>
 
-<!-- 		<div class='homepage-block'>
-		</div> -->
+		<div class='homepage-block'>
+			<h3 id='pending-approval'>Request Overtime</h3>
+			<%= link_to 'New Overtime Request', new_post_path, class: 'btn btn-lg btn-primary btn-block' %>
+		</div>
 
 	</div>
 </div>
