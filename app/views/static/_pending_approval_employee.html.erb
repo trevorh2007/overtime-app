@@ -1,0 +1,15 @@
+<% pending_approvals.last(4).each do |pending_approval| %>
+	<div class='homepage-block col-md-5'>
+		<h5>
+		<span class='pending-details'>Submitted:</span> <%= pending_approval.created_at.strftime("%a %b %d") %>, <%= pending_approval.created_at.strftime("%r") %>
+		</h5>
+
+		<h5>
+			<span class='pending-details'>Status:</span> <%= status_label pending_approval.status %>
+		</h5>
+
+			<div class='col-md-12 column'>
+				<%= link_to 'Review', edit_post_path(pending_approval), class: 'btn btn-sm btn-warning btn-block' %>
+			</div>
+	</div>
+<% end %>
