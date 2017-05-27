@@ -1,0 +1,19 @@
+<% recent_confirmed_audit_items.each do |recent_confirmed_audit_items| %>
+	<div class='homepage-block col-md-5'>
+		<h4>
+		<%= recent_confirmed_audit_items.user.full_name %>
+		</h4>
+
+		<h5>
+			<span class='pending-details'>Week starting:</span> <%= recent_confirmed_audit_items.start_date.strftime("%a %b %d") %>
+
+		<h5>
+			<span class='pending-details'>Confirmed on:</span> <%= recent_confirmed_audit_items.end_date %>
+		</h5>
+
+		<h5>
+			<span class='pending-details'>Status:</span> <%= status_label recent_confirmed_audit_items.status %>
+		</h5>
+
+	</div>
+<% end %>

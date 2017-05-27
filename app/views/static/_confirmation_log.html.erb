@@ -8,10 +8,6 @@
 			<span class='pending-details'>Week starting:</span> <%= recent_audit_items.start_date.strftime("%a %b %d") %>
 
 		<h5>
-			<span class='pending-details'>Confirmed at:</span> <%= recent_audit_items.end_date || status_label('pending') %>
-		</h5>
-
-		<h5>
 			<span class='pending-details'>Status:</span> <%= status_label recent_audit_items.status %>
 		</h5>
 

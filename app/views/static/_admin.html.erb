@@ -16,4 +16,16 @@
 
 		<%= link_to 'View All Audit Items', audit_logs_path, class: 'btn btn-primary btn-float-right' %>
 	</div>
+
+	<div class='pending-homepage row'>
+		<h2 id='item-approval'>Recently Confirmed Log</h2>
+		<hr>
+
+		<%= render partial: 'recent_confirmed_audit_items', locals: { recent_confirmed_audit_items: @recent_confirmed_audit_items } %>
+
+		<div class='clearfix'></div>
+		<hr>
+
+		<%= link_to 'View All Audit Items', audit_logs_path, class: 'btn btn-primary btn-float-right' %>
+	</div>
 </div>
