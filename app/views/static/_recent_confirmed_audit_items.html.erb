@@ -8,7 +8,7 @@
 			<span class='pending-details'>Week starting:</span> <%= recent_confirmed_audit_items.start_date.strftime("%a %b %d") %>
 
 		<h5>
-			<span class='pending-details'>Confirmed on:</span> <%= recent_confirmed_audit_items.end_date %>
+			<span class='pending-details'>Confirmed by</span> <%= recent_confirmed_audit_items.user.first_name %>, <%= recent_confirmed_audit_items.updated_at.strftime("%a %b %d") %> at <%= recent_confirmed_audit_items.updated_at.strftime("%r") %>
 		</h5>
 
 		<h5>
