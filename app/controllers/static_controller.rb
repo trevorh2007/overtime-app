@@ -3,8 +3,7 @@ class StaticController < ApplicationController
   	@pending_approvals = Post.submitted
   	if admin_types.include?(current_user.type)
   		@recent_audit_items = AuditLog.pending.last(10)
-  		@recent_confirmed_audit_items = AuditLog.confirmed.last(10)
-  		@testingbbb = AuditLog.confirmed
+  		@recent_confirmed_audit_items = AuditLog.order('updated_at DESC').confirmed.last(10)
   	else
   		@pending_audit_confirmations = current_user.audit_logs.pending
   	end
