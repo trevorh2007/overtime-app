@@ -15,7 +15,7 @@
 			<%= link_to 'New Overtime Request', new_post_path, class: 'btn btn-lg btn-primary btn-block' %>
 		</div>
 
-			<div class='recent-pending row'>
+			<div class='recent-pending row no-gutters'>
 				<h3 id='item-approval'>Recent Requests and Status</h3>
 				<hr>
 					<%= render partial: 'pending_approval_employee', locals: { pending_approvals: @pending_approvals } %>
