@@ -1,5 +1,5 @@
 <% pending_approvals.last(4).each do |pending_approval| %>
-	<div class='homepage-block col-md-5'>
+	<div class='homepage-block col-md-4'>
 		<h5>
 		<span class='pending-details'>Submitted:</span> <%= pending_approval.created_at.strftime("%a %b %d") %>, <%= pending_approval.created_at.strftime("%r") %>
 		</h5>
